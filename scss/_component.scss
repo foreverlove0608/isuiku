@@ -96,53 +96,74 @@ Component
 		@include mq(sm) {
 			line-height: 1.8;
 		}
+		
 	}
 }
 
 
 
 // Common Title style
-%__c-ttl__01{
-	display: inline-block;
-	position: relative;
-	padding-right: 64px;
-	
-	@include font-size(15);
-	@include font-fm($font-en,400);
-	@include p-before(54px, 2px){
-		@include v-align;
-		right: 0;
-		
-	}
-}
-
-
 .c-ttl{
 	&__01{
-		@extend %__c-ttl__01;
+		position: relative;
+		padding-top: 30px;
+		@include flex(0, center);
+		@include mq{
+			display: block;
+			padding-top: 40px;
+		}
+		@include p-before(13px, 18px){
+			background: url(../img/common/before-bl.png) no-repeat center/100%;
+			top: 0;
+			left: 0;
+			@include mq{
+
+			}
+		}
+		& > *{
+			@include mq{
+				display: block;
+			}
+		}
+		span{
+			@include font-size(26);
+			margin-right: 66px;
+			@include mq{
+				display: block;
+				margin-right: 0;
+				@include font-size(30);
+			}
+		}
+		small{
+			@include font-size(16);
+			position: relative;
+			padding-left: 30px;
+			@include mq{
+				padding-left: 0;
+				padding-top: 23px;
+				margin-top: 20px;
+			}
+			@include p-before(20px, 1px){
+				background: #707070;
+				top: 50%;
+				left: 0;
+				@include mq{
+					top: 0;
+				}
+			}
+		}
 		&--ff{
-			@extend %__c-ttl__01;
 			color: #fff;
-			&:before{
-				background: #fff;
+			span{
+				margin-right: 30px;
+			}
+			&::before{
+				background: url(../img/common/before-white.png) no-repeat center/100%;
 			}
 		}
 	}
 	&__02{
-		@include font-size(50);
-		line-height: 1.2;
-		font-weight: 700;
-		@include mq(lg){
-			font-size: c-max-size(34px, 6vw);
-		}
-		&-cap{
-			display: block;
-			margin-top: 15px;
-			font-size: 35%;
-			@include mq(sm){
-				font-size: c-max-size(15px, 35%);
-			}
-		}
+		
 	}	
 }
 
@@ -150,7 +171,29 @@ Component
 
 // Common Button style
 .c-btn__01{
-	
+	max-width: 260px;
+	width: 100%;
+	margin: 0 auto;
+	background: #333;
+	@include flex(center, center);
+	height: 60px;
+	@include font-size(20);
+	font-weight: 600;
+	color: #fff;
+	position: relative;
+	outline: 0;
+	border: none;
+	cursor: pointer;
+	@include smooth-transition;
+	&:hover{
+		background: #474A50;
+	}
+	@include p-before(9px, 14px){
+		background: url(../img/common/ico-btn.png) no-repeat center/100%;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 15px;
+	}
 }
 
 

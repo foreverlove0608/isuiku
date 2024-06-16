@@ -243,7 +243,7 @@ gulp.task('watch', function (done) {
 	gulp.watch('ejs/**/*.ejs', gulp.series('ejs'));
 	gulp.watch('scss/**/*.scss', gulp.series('sass'));
 	gulp.watch('./src/js/**/*.js', gulp.series('js'));
-	gulp.watch('./src/img/**/*.{jpg,jpeg,png,gif,svg}', gulp.series('img'));
-	gulp.watch('./src/img/**/*.{jpg,jpeg,png,gif,svg}', gulp.series('webp'));
+	// gulp.watch('./src/img/**/*.{jpg,jpeg,png,gif,svg}', gulp.series('img'));
+	// gulp.watch('./src/img/**/*.{jpg,jpeg,png,gif,svg}', gulp.series('webp'));
 	 done(); 
 });
