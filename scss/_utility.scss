@@ -5,22 +5,22 @@ Utility
 ==================================================== */
 .pc {
 	@include mq() {
-		display: none
+		display: none !important;
 	}
 }
 .sp {
 	@include mq(md-min){
-		display: none
+		display: none !important;
 	}
 }
 .pc-sm {
 	@include mq(sm){
-		display: none
+		display: none !important;
 	}
 }
 .sp-sm {
 	@include mq(sm-min){
-		display: none
+		display: none !important;
 	}
 }
 

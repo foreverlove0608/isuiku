@@ -1204,6 +1204,9 @@ body {
 .form-control::-webkit-input-placeholder {
   color: #ABB3BA;
 }
+.form-control::-moz-placeholder {
+  color: #ABB3BA;
+}
 .form-control:-ms-input-placeholder {
   color: #ABB3BA;
 }
@@ -1637,25 +1640,25 @@ Utility
 ==================================================== */
 @media screen and (max-width: 834px) {
   .pc {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (min-width: 835px) {
   .sp {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 640px) {
   .pc-sm {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (min-width: 641px) {
   .sp-sm {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -2647,21 +2650,15 @@ Footer
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0 min(4.028vw, 58px);
   margin-bottom: 108px;
-}
-@media screen and (max-width: 1400px) {
-  .quality-top__nav {
-    gap: 0 24px;
-  }
 }
 @media screen and (max-width: 1200px) {
   .quality-top__nav {
@@ -3182,12 +3179,44 @@ Footer
   -webkit-box-align: end;
           align-items: flex-end;
 }
-.flow-top__arr-sp {
+.flow-top__slider .slick-arrow {
   width: 31px;
   height: 11px;
-  background: url(../img/index/arr-right-sp.png) no-repeat center/100%;
+  top: -20px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+@media screen and (min-width: 835px) {
+  .flow-top__slider .slick-arrow {
+    display: none !important;
+  }
+}
+.flow-top__slider .slick-arrow:before {
   display: block;
-  margin-bottom: 35px;
+  opacity: 1;
+  content: "";
+  width: 31px;
+  height: 11px;
+}
+.flow-top__slider .slick-arrow.slick-disabled {
+  opacity: 0.4;
+}
+.flow-top__slider .slick-arrow.slick-prev {
+  left: 11px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.flow-top__slider .slick-arrow.slick-prev::before {
+  background: url(../img/index/arr-left-sp.png) no-repeat center/100%;
+}
+.flow-top__slider .slick-arrow.slick-next {
+  left: 60px;
+  right: auto;
+}
+.flow-top__slider .slick-arrow.slick-next::before {
+  background: url(../img/index/arr-right-sp.png) no-repeat center/100%;
 }
 
 .contact-top {
