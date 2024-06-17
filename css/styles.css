@@ -3153,13 +3153,12 @@ Footer
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
-  font-family: "heisei-mincho-std", serif;
+  font-family: "p22-pooper-black-pro", sans-serif;
   font-size: 4rem;
   background: url(../img/common/bg-num.png) no-repeat center/100%;
   top: 25px;
   left: 20px;
   z-index: 3;
-  padding-top: 8px;
 }
 .flow-top__slider-ttl {
   font-size: 2.5rem;

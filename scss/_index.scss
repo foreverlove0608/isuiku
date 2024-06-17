@@ -664,13 +664,12 @@
 				width: 41px;
 				height: 48px;
 				@include flex(center, center);
-				font-family: $font-jp;
+				font-family: "p22-pooper-black-pro", sans-serif;
 				@include font-size(40);
 				background: url(../img/common/bg-num.png) no-repeat center/100%;
 				top: 25px;
 				left: 20px;
 				z-index: 3;
-				padding-top: 8px;
 			}
 		}
 		&-ttl{
