@@ -811,6 +811,12 @@
 				display: flex;
 			}
 		}
+		a{
+			text-decoration: underline;
+			@include fn-hover;
+			position: relative;
+			z-index: 2;
+		}
 		.required{
 			right: 0;
 			top: 0;
