@@ -54,9 +54,9 @@ body{
 }
 
 
-.mwform-checkbox-field-text{
+.mwform-checkbox-field-text, .wpcf7-list-item-label{
 	@include mq(md-min){
-		padding-right: 58px !important;
+		padding-right: 45px !important;
 	}
 }
 

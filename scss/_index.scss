@@ -776,6 +776,17 @@
 			display: inline-flex;
 			align-items: center;
 		}
+		p{
+			@include font-size(16);
+			@include flex(0, center);
+			gap: 0 9px;
+			@include mq{
+				@include font-size(14);
+				padding-top: 0;
+				display: inline-flex;
+				align-items: center;
+			}
+		}
 	}
 	&__input{
 		@include font-size(16);

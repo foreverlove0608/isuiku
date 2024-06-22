@@ -1218,8 +1218,8 @@ body {
 }
 
 @media screen and (min-width: 835px) {
-  .mwform-checkbox-field-text {
-    padding-right: 58px !important;
+  .mwform-checkbox-field-text, .wpcf7-list-item-label {
+    padding-right: 45px !important;
   }
 }
 
@@ -3288,6 +3288,28 @@ Footer
     font-size: 1.4rem;
     padding-top: 0;
     margin-bottom: 19px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.contact-top__label p {
+  font-size: 1.6rem;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  gap: 0 9px;
+}
+@media screen and (max-width: 834px) {
+  .contact-top__label p {
+    font-size: 1.4rem;
+    padding-top: 0;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
