@@ -134,7 +134,7 @@ Component
 				@include font-size(30);
 			}
 		}
-		small{
+		small, h2{
 			@include font-size(16);
 			position: relative;
 			padding-left: 30px;

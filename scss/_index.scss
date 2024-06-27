@@ -108,10 +108,9 @@
 					margin-bottom: 0;
 				}
 			}
-			a{
+			div{
 				display: inline-block;
 				text-align: center;
-				@include fn-hover;
 				span{
 					@include font-size(30);
 					font-weight: 600;
@@ -274,7 +273,8 @@
 				padding-right: 0;
 				padding-top: 0;
 				position: relative;
-				right: -16px;
+				// right: -16px;
+				width: 90%;
 			}
 			p{
 				@include flex(0, 0);
@@ -286,8 +286,19 @@
 					@include mq{
 						@include font-size(14);
 						position: relative;
-						right: 7px;
+						// right: 7px;
 						bottom: -58px;
+						gap: 0 5px;
+					}
+					small{
+						white-space: nowrap;
+						width: 17px;
+						display: block;
+						writing-mode: tb-rl;
+						margin: 20px 0;
+						@include mq{
+							margin: 15px 0;
+						}
 					}
 				}
 			}
@@ -343,9 +354,8 @@
 			@include mq{
 				width: 50%;
 			}
-			a{
-				display: inline-block;			
-				@include fn-hover;
+			div{
+				display: inline-block;
 				span{
 					@include font-size(25);
 					font-weight: 600;
@@ -429,6 +439,7 @@
 		@include smooth-transition;
 		@include mq{
 			margin-right: 25px;
+			white-space: nowrap;
 		}
 		@include p-before(35px, 35px){
 			background: url(../img/common/arr-circle.png) no-repeat center/100%;
@@ -539,7 +550,7 @@
 			@include mq{
 				width: 100%;
 				border-bottom: 1px solid;
-				padding-bottom: 10px;
+				padding-bottom: 20px;
 			}
 		}
 	}
@@ -596,7 +607,7 @@
 			& > *{
 				display: block;
 			}
-			small{
+			h2{
 				@include font-size(16);
 				margin-bottom: 15px;
 				@include mq{
@@ -683,6 +694,7 @@
 			color: #FAFAFA;
 			@include flex(0, end);
 		}
+<<<<<<< HEAD
 
 		.slick-arrow{
 			width: 31px;
@@ -718,6 +730,16 @@
 			}
 		}
 	}
+=======
+	}
+	// &__arr-sp{
+	// 	width: 31px;
+	// 	height: 11px;
+	// 	background: url(../img/index/arr-right-sp.png) no-repeat center/100%;
+	// 	display: block;
+	// 	margin-bottom: 35px;
+	// }
+>>>>>>> up
 }
 
 .contact-top{
@@ -740,7 +762,7 @@
 			margin-bottom: 16px;
 			margin-right: 0;
 		}
-		small{
+		h2{
 			padding-left: 0;
 			padding-top: 17px;
 			display: block;

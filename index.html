@@ -86,9 +86,9 @@
 	</head>
 	<body>
 		<header id="main-header" class="main-header">
-			<a href="./" class="main-header__logo">
-				<img src="./img/common/logo.png" alt="ASUIKU">
-			</a>
+			<h1 class="main-header__logo">
+				<a href="./"><img src="./img/common/logo.png" alt="ASUIKU"></a>
+			</h1>
 			<span class="main-header__mobile-icon">
 				<span class="main-header__mobile-icon-border"></span>
 				<span class="main-header__mobile-icon-border"></span>
@@ -96,9 +96,9 @@
 			</span>
 			<nav class="main-header__navGlobal">
 				<ul class="main-header__menu" role="list">
-					<li class="main-header__menu-item"><a href="./" class="main-header__link">Gallery</a></li>
-					<li class="main-header__menu-item"><a href="./" class="main-header__link">Company info</a></li>
-					<li class="main-header__menu-item"><a href="./" class="main-header__link">Contact us</a></li>
+					<li class="main-header__menu-item"><a href="#gallery" class="main-header__link js-scroll">Gallery</a></li>
+					<li class="main-header__menu-item"><a href="#company" class="main-header__link js-scroll">Company info</a></li>
+					<li class="main-header__menu-item"><a href="#contact" class="main-header__link js-scroll">Contact us</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -116,12 +116,24 @@
 			<section class="nav-top">
 				<div class="inner">
 					<ul class="nav-top__menu">
-						<li class="nav-top__menu-item"><a href="#"><span>Management</span><small>マネジメント</small></a></li>
-						<li class="nav-top__menu-item"><a href="#"><span>Planning</span><small>企画</small></a></li>
-						<li class="nav-top__menu-item"><a href="#"><span>Cost</span><small>コスト</small></a></li>
-						<li class="nav-top__menu-item"><a href="#"><span>Design</span><small>デザイン</small></a></li>
-						<li class="nav-top__menu-item"><a href="#"><span>Material</span><small>材質</small></a></li>
-						<li class="nav-top__menu-item"><a href="#"><span>Craftsmanship</span><small>職人技術</small></a></li>
+						<li class="nav-top__menu-item">
+							<div><span>Management</span><small>マネジメント</small></div>
+						</li>
+						<li class="nav-top__menu-item">
+							<div><span>Planning</span><small>企画</small></div>
+						</li>
+						<li class="nav-top__menu-item">
+							<div><span>Cost</span><small>コスト</small></div>
+						</li>
+						<li class="nav-top__menu-item">
+							<div><span>Design</span><small>デザイン</small></div>
+						</li>
+						<li class="nav-top__menu-item">
+							<div><span>Material</span><small>材質</small></div>
+						</li>
+						<li class="nav-top__menu-item">
+							<div><span>Craftsmanship</span><small>職人技術</small></div>
+						</li>
 					</ul>
 					<div class="nav-top__desc">
 						<p>内装は強く優しく、<br>誰にでも素直でオープンに。</p>
@@ -138,7 +150,7 @@
 					</div>
 					<div class="ideal-top__wp">
 						<div class="ideal-top__wp-content">
-							<p class="note"><span>代表取締役中武大</span><br><span>株式会社アスイク</span></p>
+							<p class="note"><span>代表取締役<small>中武</small><small>大</small></span><br><span>株式会社アスイク</span></p>
 							<p><span>確かな職人技術で実現していく</span><br><span>イメ<span class="txt-other">ー</span>ジにあった設計者を選び</span></p>
 							<p><span>そんな方々の願いや想いをカタチに</span><br><span>ただどこに相談すればよいのかわからない</span></p>
 							<p><span>理想の空間作りを追求したい</span><br><span>テレビや雑誌で見かけるような</span></p>
@@ -154,16 +166,28 @@
 				<div class="inner">
 					<h2 class="quality-top__ttl">安定した最高品質を、<br>ASUIKUと共に。</h2>
 					<ul class="quality-top__nav">
-						<li class="quality-top__nav-item"><a href="#"><span>Management</span><small>マネジメント</small></a></li>
-						<li class="quality-top__nav-item"><a href="#"><span>Planning</span><small>企画</small></a></li>
-						<li class="quality-top__nav-item"><a href="#"><span>Cost</span><small>コスト</small></a></li>
-						<li class="quality-top__nav-item"><a href="#"><span>Design</span><small>デザイン</small></a></li>
-						<li class="quality-top__nav-item"><a href="#"><span>Material</span><small>材質</small></a></li>
-						<li class="quality-top__nav-item"><a href="#"><span>Craftsmanship</span><small>職人技術</small></a></li>
+						<li class="quality-top__nav-item">
+							<div><span>Management</span><small>マネジメント</small></div>
+						</li>
+						<li class="quality-top__nav-item">
+							<div><span>Planning</span><small>企画</small></div>
+						</li>
+						<li class="quality-top__nav-item">
+							<div><span>Cost</span><small>コスト</small></div>
+						</li>
+						<li class="quality-top__nav-item">
+							<div><span>Design</span><small>デザイン</small></div>
+						</li>
+						<li class="quality-top__nav-item">
+							<div><span>Material</span><small>材質</small></div>
+						</li>
+						<li class="quality-top__nav-item">
+							<div><span>Craftsmanship</span><small>職人技術</small></div>
+						</li>
 					</ul>
 				</div>
 			</section>
-			<section class="gallery-top">
+			<section class="gallery-top" id="gallery">
 				<ul class="gallery-top__slider js-gallery">
 					<li><img src="./img/index/img-slider-01.jpg" alt=""></li>
 					<li><img src="./img/index/img-slider-02.jpg" alt=""></li>
@@ -174,21 +198,21 @@
 				</ul>
 				<div class="gallery-top__note">Slide to the right</div>
 			</section>
-			<section class="company-top">
+			<section class="company-top" id="company">
 				<div class="company-top__wp">
-					<h2 class="c-ttl__01 company-top__ct-ttl sp">
+					<div class="c-ttl__01 company-top__ct-ttl sp">
 						<span>Company info</span>
-						<small>会社概要</small>
-					</h2>
+						<h2>会社概要</h2>
+					</div>
 					<div class="company-top__img">
 						<img src="./img/index/img-company-01.png" alt="Company info 会社概要" class="pc">
 						<img src="./img/index/img-company-01-sp.jpg" alt="Company info 会社概要" class="sp">
 					</div>
 					<div class="company-top__ct">
-						<h2 class="c-ttl__01 company-top__ct-ttl pc">
+						<div class="c-ttl__01 company-top__ct-ttl pc">
 							<span>Company info</span>
-							<small>会社概要</small>
-						</h2>
+							<h2>会社概要</h2>
+						</div>
 						<dl class="company-top__ct-dl">
 							<dt class="company-top__ct-dt">会社名</dt>
 							<dd class="company-top__ct-dd">株式会社アスイク</dd>
@@ -218,10 +242,10 @@
 				<div class="inner">
 					<div class="company-top__ceo">
 						<div class="company-top__ceo-ct">
-							<h3 class="company-top__ceo-ttl">
-								<small>代 表 取 締 役</small>
+							<div class="company-top__ceo-ttl">
+								<h3>代 表 取 締 役</h3>
 								<span>中武 大 / DAI NAKATAKE</span>
-							</h3>
+							</div>
 							<div class="company-top__ceo-desc"> 1976年生まれ、 宮崎県出身。<br> 大工棟梁の祖父の影響で10代から大工見習いとなり、20代で独り立ち後に施工管理として内装会社へ転職、幅広い工事経験を積んだ後、30代でインテリアデザイン会社で、工事部門の立ち上げを経験後、独立 </div>
 						</div>
 						<div class="company-top__ceo-img">
@@ -232,10 +256,16 @@
 				</div>
 			</section>
 			<section class="flow-top">
-				<h2 class="c-ttl__01 c-ttl__01--ff flow-top__ttl">
+				<div class="c-ttl__01 c-ttl__01--ff flow-top__ttl">
 					<span>Flow</span>
+<<<<<<< HEAD
 					<small>サービスの流れ</small>
 				</h2>
+=======
+					<h2>サービスの流れ</h2>
+				</div>
+				<span class="flow-top__arr-sp sp"></span>
+>>>>>>> up
 				<ul class="flow-top__slider js-slider-flow">
 					<li class="flow-top__slider-item">
 						<div class="flow-top__slider-wp">
@@ -293,12 +323,12 @@
 					</li>
 				</ul>
 			</section>
-			<section class="contact-top">
+			<section class="contact-top" id="contact">
 				<div class="inner">
-					<h2 class="c-ttl__01 contact-top__ttl">
+					<div class="c-ttl__01 contact-top__ttl">
 						<span>Contact us</span>
-						<small>お問い合わせ</small>
-					</h2>
+						<h2>お問い合わせ</h2>
+					</div>
 					<form action="#contact" method="post" class="contact-top__form">
 						<dl class="contact-top__item">
 							<dt class="contact-top__label">
