@@ -435,11 +435,10 @@
 		padding-left: 45px;
 		position: relative;
 		bottom: -8px;
-		cursor: pointer;
-		@include smooth-transition;
+		margin-right: 15px;
+		white-space: nowrap;
 		@include mq{
 			margin-right: 25px;
-			white-space: nowrap;
 		}
 		@include p-before(35px, 35px){
 			background: url(../img/common/arr-circle.png) no-repeat center/100%;
@@ -447,12 +446,6 @@
 			transform: translateY(-50%);
 			left: 0;
 			@include smooth-transition;
-		}
-		&:hover{
-			color: #ABB3BA;
-			&::before{
-				background: url(../img/common/arr-circle-hv.png) no-repeat center/100%;
-			}
 		}
 	}
 }
@@ -700,9 +693,6 @@
 			height: 11px;
 			top: -20px;
 			transform: translateY(-100%);
-			@include mq(md-min){
-				display: none !important;
-			}
 			&:before{
 				display: block;
 				opacity: 1;

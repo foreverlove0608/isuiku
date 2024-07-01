@@ -1204,6 +1204,9 @@ body {
 .form-control::-webkit-input-placeholder {
   color: #ABB3BA;
 }
+.form-control::-moz-placeholder {
+  color: #ABB3BA;
+}
 .form-control:-ms-input-placeholder {
   color: #ABB3BA;
 }
@@ -2792,16 +2795,12 @@ Footer
   padding-left: 45px;
   position: relative;
   bottom: -8px;
-  cursor: pointer;
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  margin-right: 15px;
+  white-space: nowrap;
 }
 @media screen and (max-width: 834px) {
   .gallery-top__note {
     margin-right: 25px;
-    white-space: nowrap;
   }
 }
 .gallery-top__note:before {
@@ -2820,12 +2819,6 @@ Footer
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-.gallery-top__note:hover {
-  color: #ABB3BA;
-}
-.gallery-top__note:hover::before {
-  background: url(../img/common/arr-circle-hv.png) no-repeat center/100%;
 }
 
 .company-top {
@@ -3178,11 +3171,6 @@ Footer
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
-}
-@media screen and (min-width: 835px) {
-  .flow-top__slider .slick-arrow {
-    display: none !important;
-  }
 }
 .flow-top__slider .slick-arrow:before {
   display: block;
