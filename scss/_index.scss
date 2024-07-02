@@ -1,26 +1,32 @@
 @use 'vars' as *;
 
-.mv-top{
+.mv-top {
 	padding: 170px 0 48.5vw;
-	@include mq(tb){
+
+	@include mq(tb) {
 		padding-bottom: 67vw;
 	}
-	@include mq{
+
+	@include mq {
 		position: relative;
 		padding: 0;
 		background: #EEEEEE;
-		@include p-after(100%, 60px){
+
+		@include p-after(100%, 60px) {
 			background: #fff;
 			bottom: 0;
 			left: 0;
 		}
 	}
-	&__ttl{
+
+	&__ttl {
 		max-width: 750px;
-		@include mq{
+
+		@include mq {
 			max-width: 500px;
 		}
-		@include mq{
+
+		@include mq {
 			max-width: 327px;
 			position: absolute;
 			top: 30px;
@@ -28,217 +34,263 @@
 			z-index: 2;
 		}
 	}
-	&__img{
+
+	&__img {
 		position: relative;
 		top: -60px;
-		@include mq{
-			img{
+
+		@include mq {
+			img {
 				height: 130vw;
 				width: 100%;
 				object-fit: cover;
 				object-position: bottom;
 			}
 		}
-		@include mq(sm){
-			img{
+
+		@include mq(sm) {
+			img {
 				height: auto;
 			}
 		}
 	}
 }
 
-.nav-top{
+.nav-top {
 	position: relative;
 	margin-bottom: -108px;
-	@include mq{
+
+	@include mq {
 		padding-top: 15px;
 		padding-bottom: 0;
 		margin-bottom: -133px;
 	}
-	@include p-before(564px, 647px){
+
+	@include p-before(564px, 647px) {
 		top: 50%;
 		left: 0;
 		transform: translate(-53%, -57%);
 		background: url(../img/common/before-nav.png) no-repeat center/100%;
-		@include mq(tb){
+
+		@include mq(tb) {
 			transform: translate(-78%, -57%);
 		}
-		@include mq{
+
+		@include mq {
 			width: 375px;
 			height: 430px;
 			top: -12px;
 			transform: translate(-81%, 0);
 		}
 	}
-	@include p-after(375px, 430px){
+
+	@include p-after(375px, 430px) {
 		top: -12px;
 		display: none;
 		right: 0;
 		transform: translate(81%, 0);
 		background: url(../img/common/before-nav.png) no-repeat center/100%;
-		@include mq(sm){
+
+		@include mq(sm) {
 			display: block;
 		}
 	}
-	.inner{
+
+	.inner {
 		@include flex(0, center, wrap);
 	}
-	&__menu{
+
+	&__menu {
 		width: 50%;
 		padding-left: 6px;
-		@include mq(tb){
+
+		@include mq(tb) {
 			padding-left: 5%;
 		}
-		@include mq{
+
+		@include mq {
 			padding-left: 0;
 			width: 45%;
 		}
-		@include mq(sm){
+
+		@include mq(sm) {
 			width: 100%;
 			padding-left: 0;
 			margin-bottom: 86px;
 		}
-		&-item{
+
+		&-item {
 			margin-bottom: 65px;
 			position: relative;
-			@include mq{
+
+			@include mq {
 				margin-bottom: 30px;
 				text-align: center;
-				&:last-of-type{
+
+				&:last-of-type {
 					margin-bottom: 0;
 				}
 			}
-			div{
+
+			div {
 				display: inline-block;
 				text-align: center;
-				span{
+
+				span {
 					@include font-size(30);
 					font-weight: 600;
 					display: block;
 					margin-bottom: 7px;
 					letter-spacing: 1.5px;
-					@include mq{
+
+					@include mq {
 						@include font-size(21);
 					}
 				}
-				small{
+
+				small {
 					@include font-size(15);
 					position: relative;
 					@include flex(center, center);
 					gap: 0 7px;
-					@include mq{
+
+					@include mq {
 						@include font-size(10);
 					}
-					&:before, &:after{
+
+					&:before,
+					&:after {
 						content: "";
 						display: inline-block;
 						width: 24px;
 						height: 1px;
 						background: $color-base;
-						@include mq{
+
+						@include mq {
 							width: 18px;
 						}
 					}
 				}
 			}
-			&:nth-child(2){
-				@include mq(md-min){
+
+			&:nth-child(2) {
+				@include mq(md-min) {
 					left: 29%;
 				}
 			}
-			&:nth-child(3){
-				@include mq(md-min){
+
+			&:nth-child(3) {
+				@include mq(md-min) {
 					left: 34%;
 				}
 			}
-			&:nth-child(4){
-				@include mq(md-min){
+
+			&:nth-child(4) {
+				@include mq(md-min) {
 					left: 39%;
 				}
 			}
-			&:nth-child(5){
-				@include mq(md-min){
+
+			&:nth-child(5) {
+				@include mq(md-min) {
 					left: 29%;
 				}
 			}
-			&:nth-child(6){
-				@include mq(md-min){
+
+			&:nth-child(6) {
+				@include mq(md-min) {
 					left: -12px;
 				}
 			}
 		}
 	}
-	&__desc{
+
+	&__desc {
 		width: 50%;
 		@include fts(30, 55);
 		font-weight: 800;
 		position: relative;
 		top: -60px;
-		@include mq(tb){
+
+		@include mq(tb) {
 			@include font-size(24);
 		}
-		@include mq{
+
+		@include mq {
 			width: 55%;
 			@include fts(20, 30);
 			top: 0;
 		}
-		@include mq(sm){
+
+		@include mq(sm) {
 			width: 100%;
 		}
-		p{
+
+		p {
 			margin-bottom: 47px;
-			@include mq{
+
+			@include mq {
 				margin-bottom: 30px;
 			}
-			&:last-of-type{
+
+			&:last-of-type {
 				margin-bottom: 0;
 			}
 		}
 	}
 }
 
-.ideal-top{
+.ideal-top {
 	padding: 208px 0 675px;
 	background: url(../img/index/bg-ideal.png) no-repeat center/100% 100%;
 	margin-bottom: -295px;
-	@include mq(tb){
+
+	@include mq(tb) {
 		background: url(../img/index/bg-ideal.png) no-repeat center top -10%/100% 90%;
 	}
-	@include mq{
+
+	@include mq {
 		padding: 213px 0 500px;
 		margin-bottom: -220px;
 		background: url(../img/index/bg-ideal-sp.png) no-repeat left 29% top 44%/100% 88%;
 	}
-	@include mq(sm){
+
+	@include mq(sm) {
 		background: url(../img/index/bg-ideal-sp.png) no-repeat left 29% top 13%/743px 1454px;
 	}
-	&__img{
+
+	&__img {
 		margin-bottom: 95px;
-		@include mq{
+
+		@include mq {
 			margin-bottom: 44px;
 			padding: 0 6px;
 		}
 	}
-	&__wp{
+
+	&__wp {
 		max-width: 770px;
 		width: 100%;
 		margin: 0 auto;
 		color: #fff;
 		@include flex(0, 0, wrap);
-		@include mq{
+
+		@include mq {
 			flex-direction: column-reverse;
 			max-width: 450px;
 			width: 100%;
 			margin: 0 auto;
 		}
-		&-ttl{
+
+		&-ttl {
 			font-family: $font-jp;
 			@include font-size(34);
 			line-height: 1.42;
 			width: 86px;
 			writing-mode: tb-rl;
 			letter-spacing: 4px;
-			@include mq{
+
+			@include mq {
 				@include font-size(25);
 				writing-mode: lr;
 				margin-bottom: 77px;
@@ -246,29 +298,34 @@
 				text-align: center;
 				letter-spacing: 2px;
 			}
-			span{
-				@include mq(md-min){
+
+			span {
+				@include mq(md-min) {
 					width: 35px;
 				}
 			}
-			small{
+
+			small {
 				@include font-size(34);
 				line-height: 1.12;
 				writing-mode: horizontal-tb;
-				@include mq{
+
+				@include mq {
 					@include font-size(25);
 				}
 			}
 		}
-		&-content{
+
+		&-content {
 			@include fts(22, 27);
 			width: calc(100% - 86px);
 			padding-right: 96px;
-    		padding-top: 88px;
+			padding-top: 88px;
 			font-family: $font-jp;
 			@include flex(between, 0);
 			line-height: 1.22;
-			@include mq{
+
+			@include mq {
 				@include font-size(17);
 				padding-right: 0;
 				padding-top: 0;
@@ -276,40 +333,48 @@
 				// right: -16px;
 				width: 90%;
 			}
-			p{
+
+			p {
 				@include flex(0, 0);
 				gap: 0 7px;
-				&.note{
+
+				&.note {
 					align-items: flex-end;
 					@include font-size(18);
 					gap: 0;
-					@include mq{
+
+					@include mq {
 						@include font-size(14);
 						position: relative;
 						// right: 7px;
 						bottom: -58px;
 						gap: 0 5px;
 					}
-					small{
+
+					small {
 						white-space: nowrap;
 						width: 17px;
 						display: block;
 						writing-mode: tb-rl;
 						margin: 20px 0;
-						@include mq{
+
+						@include mq {
 							margin: 15px 0;
 						}
 					}
 				}
 			}
-			span{
+
+			span {
 				width: 35px;
 				word-break: break-word;
-				@include mq{
+
+				@include mq {
 					width: 17px;
 				}
 			}
-			.txt-other{
+
+			.txt-other {
 				writing-mode: vertical-lr;
 			}
 		}
@@ -317,71 +382,88 @@
 }
 
 
-.quality-top{
-	@include mq{
+.quality-top {
+	@include mq {
 		padding-bottom: 40px;
 	}
-	&__ttl{
+
+	&__ttl {
 		text-align: center;
 		@include fts(70, 90);
 		font-weight: 800;
 		margin-bottom: 60px;
-		@include mq(tb){
+
+		@include mq(tb) {
 			@include font-size(50);
 		}
-		@include mq{
+
+		@include mq {
 			@include fts(30, 40);
 			margin-bottom: 65px;
 		}
 	}
-	&__nav{
+
+	&__nav {
 		@include flex(between, center, wrap);
 		margin-bottom: 108px;
-		@include mq(xl){
+
+		@include mq(xl) {
 			gap: 0;
 			margin-bottom: 80px;
 		}
-		@include mq{
+
+		@include mq {
 			gap: 0;
 			margin-bottom: 0;
 		}
-		&-item{
-			@include mq(xl){
+
+		&-item {
+			@include mq(xl) {
 				width: 33.33%;
 				margin-bottom: 34px;
 				text-align: center;
 			}
-			@include mq{
+
+			@include mq {
 				width: 50%;
 			}
-			div{
+
+			div {
 				display: inline-block;
-				span{
+
+				span {
 					@include font-size(25);
 					font-weight: 600;
 					display: block;
 					margin-bottom: 7px;
 					letter-spacing: 1.5px;
-					@include mq{
+					text-align: center;
+
+					@include mq {
 						@include font-size(18);
 					}
 				}
-				small{
+
+				small {
 					@include font-size(15);
 					position: relative;
 					@include flex(center, center);
 					gap: 0 7px;
 					white-space: nowrap;
-					@include mq{
+
+					@include mq {
 						@include font-size(10);
 					}
-					&:before, &:after{
+
+					&:before,
+					&:after {
 						content: "";
 						display: inline-block;
 						width: 24px;
 						height: 1px;
 						background: $color-base;
-						@include mq{
+
+						@include mq {
 							width: 10px;
 						}
 					}
@@ -391,43 +473,99 @@
 	}
 }
 
-.gallery-top{
+.gallery-top {
 	position: relative;
 	margin-bottom: 72px;
-	@include mq{
+
+	@include mq {
 		margin-bottom: 113px;
 	}
-	@include p-after(calc(100% - 238px), 1px){
+
+	@include p-after(calc(100% - 238px), 1px) {
 		background: $color-base;
 		bottom: 0;
 		left: 0;
-		@include mq{
+
+		@include mq {
 			left: 15px;
 		}
 	}
-	&__slider{
+
+	&__slider {
 		margin: 0 -10px 38px;
 		padding-left: 19px;
-		@include mq{
+
+		@include mq {
 			margin: 0 -7px 57px;
 			padding-left: 15px;
 		}
-		.slick-list{
-			@include mq{
+
+		.slick-list {
+			@include mq {
 				padding-right: 30%;
 			}
 		}
-		li{
+
+		li {
 			padding: 0 10px;
-			@include mq{
+
+			@include mq {
 				padding: 0 7px;
 			}
-			img{
+
+			img {
 				border-radius: 10px;
 			}
 		}
 	}
-	&__note{
+
+	.scroll_wrap {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.scroll_inner {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 0 30px;
+	}
+
+	.scroll_track {
+		width: max-content;
+		animation: infiniteScroll 10s linear infinite;
+	  
+		&:hover {
+		  animation-play-state: paused;
+		}
+	}
+
+	.scroll_cont {
+		display: grid;
+		place-content: center;
+		flex-shrink: 0;
+		width: 22vw;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		overflow: hidden;
+		@include mq{
+			width: 33vw;
+		}
+		@include mq(sm){
+			width: 50vw;
+		}
+	}
+
+
+	@keyframes infiniteScroll {
+		0% {
+		  transform: translateX(0);
+		}
+		100% {
+		  transform: translateX(calc(-50% - 30px / 2));
+		}
+	}
+
+	&__note {
 		@include font-size(16);
 		max-width: 180px;
 		margin-left: auto;
@@ -437,10 +575,12 @@
 		bottom: -8px;
 		margin-right: 15px;
 		white-space: nowrap;
-		@include mq{
+
+		@include mq {
 			margin-right: 25px;
 		}
-		@include p-before(35px, 35px){
+
+		@include p-before(35px, 35px) {
 			background: url(../img/common/arr-circle.png) no-repeat center/100%;
 			top: 50%;
 			transform: translateY(-50%);
@@ -450,97 +590,120 @@
 	}
 }
 
-.company-top{
+.company-top {
 	padding-bottom: 96px;
-	@include mq{
+
+	@include mq {
 		padding-bottom: 83px;
 	}
-	&__wp{
+
+	&__wp {
 		@include flex(0, 0, wrap);
 		margin-bottom: -10.8vw;
-		@media screen and (max-width: 1366px){
+
+		@media screen and (max-width: 1366px) {
 			margin-bottom: 0;
 		}
-		@include mq(tb){
+
+		@include mq(tb) {
 			margin-bottom: 4.2vw;
 		}
-		@include mq{
+
+		@include mq {
 			margin-bottom: 0;
 			padding: 0 4%;
 			margin-bottom: 57px;
 		}
 	}
-	&__img{
+
+	&__img {
 		width: 50%;
-		@include mq(tb){
+
+		@include mq(tb) {
 			width: 45%;
 		}
-		@include mq{
+
+		@include mq {
 			width: 109%;
 			margin: 0 -4.5% 30px -4.5%;
 		}
-		img{
+
+		img {
 			position: relative;
 			transform: translateX(-73px);
 			width: 100%;
-			@include mq{
+
+			@include mq {
 				transform: none;
 			}
 		}
 	}
-	&__ct{
+
+	&__ct {
 		width: 50%;
 		@include fts(16, 27);
-		@include mq(tb){
+
+		@include mq(tb) {
 			width: 55%;
 			padding-right: 15px;
 		}
-		@include mq{
+
+		@include mq {
 			width: 100%;
 			padding-right: 0;
 		}
-		&-ttl{
+
+		&-ttl {
 			margin-bottom: 72px;
-			@include mq(tb){
+
+			@include mq(tb) {
 				margin-bottom: 46px;
 			}
 		}
-		&-dl{
+
+		&-dl {
 			max-width: 480px;
 			width: 100%;
 			@include flex(between, 0, wrap);
 			margin-bottom: 27px;
 			position: relative;
 			left: 20px;
-			@include mq(tb){
+
+			@include mq(tb) {
 				left: 0;
 			}
-			@include mq{
+
+			@include mq {
 				max-width: 100%;
 				left: 0;
 				margin-bottom: 15px;
 				padding: 0 12px;
 			}
-			&:last-of-type{
+
+			&:last-of-type {
 				margin-bottom: 0;
 			}
 		}
-		&-dt{
+
+		&-dt {
 			width: 120px;
 			font-weight: 600;
 			border-bottom: 1px solid $color-base;
-			@include mq{
+
+			@include mq {
 				width: 100%;
 				border-bottom: 1px dotted $color-base;
 				margin-bottom: 10px;
 				padding-bottom: 3px;
 			}
 		}
-		&-dd{
+
+		&-dd {
 			width: calc(100% - 140px);
 			padding-bottom: 5px;
 			border-bottom: 1px dotted $color-base;
-			@include mq{
+
+			@include mq {
 				width: 100%;
 				border-bottom: 1px solid;
 				padding-bottom: 20px;
@@ -548,81 +711,100 @@
 		}
 	}
 
-	&__ceo{
+	&__ceo {
 		padding: 40px 0 37px 40px;
 		position: relative;
 		@include flex(0, 0, wrap);
-		@include mq{
+
+		@include mq {
 			padding: 0;
 			box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.1);
 			width: 96%;
 			margin: 0 auto;
 		}
-		@include p-after(90%, 320px){
+
+		@include p-after(90%, 320px) {
 			background: #fff;
 			box-shadow: 0 0 30px rgba($color: #000000, $alpha: 0.1);
 			top: 0;
 			left: 0;
-			@include mq(tb){
+
+			@include mq(tb) {
 				height: 350px;
 			}
-			@include mq{
+
+			@include mq {
 				display: none;
 			}
 		}
-		@include mq{
+
+		@include mq {
 			flex-direction: column-reverse;
 		}
-		&-ct{
+
+		&-ct {
 			width: 50%;
 			position: relative;
 			z-index: 2;
-			@include mq{
+
+			@include mq {
 				width: 100%;
 				padding: 26px 19px 30px;
 			}
 		}
-		&-desc{
+
+		&-desc {
 			@include fts(16, 27);
 		}
-		&-ttl{
+
+		&-ttl {
 			margin-bottom: 30px;
 			position: relative;
 			padding-bottom: 27px;
-			@include mq{
+
+			@include mq {
 				margin-bottom: 20px;
 				padding-bottom: 15px;
 			}
-			@include p-after(30px, 1px){
+
+			@include p-after(30px, 1px) {
 				background: url(../img/index/after-ttl-ceo.png) no-repeat center/100%;
 				bottom: 0;
 			}
-			& > *{
+
+			&>* {
 				display: block;
 			}
-			h2{
+
+			h2 {
 				@include font-size(16);
 				margin-bottom: 15px;
-				@include mq{
+
+				@include mq {
 					@include font-size(14);
 				}
 			}
-			span{
+
+			span {
 				@include font-size(27);
-				@include mq{
+
+				@include mq {
 					@include font-size(20);
 				}
 			}
 		}
-		&-img{
+
+		&-img {
 			width: 50%;
 			padding-left: 25px;
 			position: relative;
 			z-index: 2;
-			img{
+
+			img {
 				width: 100%;
 			}
-			@include mq{
+
+			@include mq {
 				width: 100%;
 				padding: 0 6px;
 			}
@@ -630,38 +812,47 @@
 	}
 }
 
-.flow-top{
+.flow-top {
 	background: $color-base;
 	padding: 22px 0 min(11.111vw, 160px) 50px;
-	@include mq{
+
+	@include mq {
 		padding: 63px 15px 92px;
 	}
-	&__ttl{
+
+	&__ttl {
 		margin-bottom: min(8.333vw, 120px);
 		padding-top: 40px;
-		@include mq{
+
+		@include mq {
 			margin-bottom: 50px;
 			padding-top: 44px;
 		}
 	}
-	&__slider{
+
+	&__slider {
 		counter-reset: li;
 		margin: 0 -10px;
-		.slick-list{
+
+		.slick-list {
 			padding-right: 8%;
-			@include mq{
+
+			@include mq {
 				padding-right: 30%;
 			}
 		}
-		li{
+
+		li {
 			padding: 0 10px;
 		}
-		&-wp{
+
+		&-wp {
 			border: 1px solid #ABB3BA;
 			border-radius: 10px;
 			padding: 92px 20px 20px;
 			position: relative;
-			&::before{
+
+			&::before {
 				position: absolute;
 				counter-increment: li;
 				content: counter(li);
@@ -676,50 +867,59 @@
 				z-index: 3;
 			}
 		}
-		&-ttl{
+
+		&-ttl {
 			@include font-size(25);
 			font-weight: 600;
 			color: #fff;
 			margin-bottom: 55px;
 		}
-		&-desc{
+
+		&-desc {
 			@include fts(16, 21);
 			color: #FAFAFA;
 			@include flex(0, end);
 		}
 
-		.slick-arrow{
+		.slick-arrow {
 			width: 31px;
 			height: 11px;
 			top: -20px;
 			transform: translateY(-100%);
-			&:before{
+
+			&:before {
 				display: block;
 				opacity: 1;
 				content: "";
 				width: 31px;
 				height: 11px;
 			}
-			&.slick-disabled{
+
+			&.slick-disabled {
 				// opacity: 0.4;
 				display: none !important;
-				& + .slick-list{
-					& + .slick-next{
+
+				&+.slick-list {
+					&+.slick-next {
 						left: 15px;
 					}
 				}
 			}
-			&.slick-prev{
+
+			&.slick-prev {
 				left: 11px;
 				transform: translateY(-100%);
-				&::before{
+
+				&::before {
 					background: url(../img/index/arr-left-sp.png) no-repeat center/100%;
 				}
 			}
-			&.slick-next{
+
+			&.slick-next {
 				left: 60px;
 				right: auto;
-				&::before{
+
+				&::before {
 					background: url(../img/index/arr-right-sp.png) no-repeat center/100%;
 				}
 			}
@@ -727,67 +927,81 @@
 	}
 }
 
-.contact-top{
+.contact-top {
 	padding: min(10.764vw, 155px) 0 min(12.083vw, 174px);
-	@include mq{
+
+	@include mq {
 		padding: 79px 0 136px;
 	}
-	&__ttl{
+
+	&__ttl {
 		text-align: center;
 		margin-bottom: 74px;
 		display: block;
 		padding-top: 36px;
-		&::before{
+
+		&::before {
 			left: 50%;
 			top: 0;
 			transform: translateX(-50%);
 		}
-		span{
+
+		span {
 			display: block;
 			margin-bottom: 16px;
 			margin-right: 0;
 		}
-		h2{
+
+		h2 {
 			padding-left: 0;
 			padding-top: 17px;
 			display: block;
-			&::before{
+
+			&::before {
 				left: 50%;
 				top: 0;
 				transform: translate(-50%, 0);
 			}
 		}
 	}
-	&__form{
+
+	&__form {
 		max-width: 500px;
 		margin: 0 auto;
 	}
-	&__item{
+
+	&__item {
 		margin-bottom: 50px;
-		@include mq{
+
+		@include mq {
 			padding: 0 6px;
-			&:last-of-type{
+
+			&:last-of-type {
 				margin-bottom: 30px;
 			}
 		}
 	}
-	&__label{
+
+	&__label {
 		@include font-size(16);
 		@include flex(0, center);
 		gap: 0 9px;
 		margin-bottom: 19px;
-		@include mq{
+
+		@include mq {
 			@include font-size(14);
 			padding-top: 0;
 			margin-bottom: 19px;
 			display: inline-flex;
 			align-items: center;
 		}
-		p{
+
+		p {
 			@include font-size(16);
 			@include flex(0, center);
 			gap: 0 9px;
-			@include mq{
+
+			@include mq {
 				@include font-size(14);
 				padding-top: 0;
 				display: inline-flex;
@@ -795,51 +1009,60 @@
 			}
 		}
 	}
-	&__input{
+
+	&__input {
 		@include font-size(16);
-		@include mq{
+
+		@include mq {
 			@include font-size(14);
 		}
 
-		&--textarea{
+		&--textarea {
 			padding-top: 16px;
-			@include mq{
+
+			@include mq {
 				padding-top: 0;
 				line-height: 1.5;
 			}
 		}
 
-		.mwform-radio-field{
+		.mwform-radio-field {
 			display: inline-block;
 			margin-bottom: 18px;
-			&:last-of-type{
+
+			&:last-of-type {
 				margin-bottom: 0;
 			}
 		}
 	}
-	
-	&__check{
+
+	&__check {
 		max-width: 373px;
 		width: 100%;
 		margin: 30px auto 67px;
-		@include mq{
+
+		@include mq {
 			margin: 10px auto 42px;
 			padding-left: 4px;
-			.mwform-checkbox-field-text{
+
+			.mwform-checkbox-field-text {
 				display: flex;
 			}
 		}
-		a{
+
+		a {
 			text-decoration: underline;
 			@include fn-hover;
 			position: relative;
 			z-index: 2;
 		}
-		.required{
+
+		.required {
 			right: 0;
 			top: 0;
 			position: absolute;
-			@include mq{
+
+			@include mq {
 				right: -62px;
 				top: 50%;
 				position: absolute;
@@ -850,7 +1073,8 @@
 }
 
 
-.required, .any{
+.required,
+.any {
 	width: 35px;
 	height: 18px;
 	color: #fff;
@@ -859,12 +1083,13 @@
 	@include font-size(13);
 	text-align: center;
 	padding-top: 3px;
-	@include mq{
+
+	@include mq {
 		position: static;
 		margin-left: 2px;
 	}
 }
 
-.any{
+.any {
 	background: #71AFAF;
 }

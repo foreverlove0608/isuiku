@@ -2698,6 +2698,7 @@ Footer
   display: block;
   margin-bottom: 7px;
   letter-spacing: 1.5px;
+  text-align: center;
 }
 @media screen and (max-width: 834px) {
   .quality-top__nav-item div span {
@@ -2786,6 +2787,69 @@ Footer
 }
 .gallery-top__slider li img {
   border-radius: 10px;
+}
+.gallery-top .scroll_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.gallery-top .scroll_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 0 30px;
+}
+.gallery-top .scroll_track {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-animation: infiniteScroll 10s linear infinite;
+          animation: infiniteScroll 10s linear infinite;
+}
+.gallery-top .scroll_track:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.gallery-top .scroll_cont {
+  display: grid;
+  place-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 22vw;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media screen and (max-width: 834px) {
+  .gallery-top .scroll_cont {
+    width: 33vw;
+  }
+}
+@media screen and (max-width: 640px) {
+  .gallery-top .scroll_cont {
+    width: 50vw;
+  }
+}
+@-webkit-keyframes infiniteScroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-50% - 15px));
+            transform: translateX(calc(-50% - 15px));
+  }
+}
+@keyframes infiniteScroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-50% - 15px));
+            transform: translateX(calc(-50% - 15px));
+  }
 }
 .gallery-top__note {
   font-size: 1.6rem;
@@ -3372,7 +3436,8 @@ Footer
   }
 }
 
-.required, .any {
+.required,
+.any {
   width: 35px;
   height: 18px;
   color: #fff;
@@ -3391,7 +3456,8 @@ Footer
   padding-top: 3px;
 }
 @media screen and (max-width: 834px) {
-  .required, .any {
+  .required,
+.any {
     position: static;
     margin-left: 2px;
   }
